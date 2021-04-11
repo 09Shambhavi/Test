@@ -1,0 +1,65 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+
+
+
+   $(function() {
+   var information = [];
+   $.getJSON('Test1.json', function(data) {
+       $.each(data.information, function(i, info) {
+
+          //"<a href='javascript:void(0);'  onclick='myTest(" + info.ImageName + ")'>" + "</a>"
+          var tblRow = "<tr>" + 
+            "<td>" + info.SrNo + "</td>" + 
+            "<td>" + info.Entity + "</td>" + 
+            //"<td onclick='myTest(" + (iName) +")'>" +info.Value + "</td>" + 
+            "<td id="+info.ImageName+">" + info.Value.on("click",function(){
+               //("#"+info.ImageName+"")
+               myTest(info.ImageName);
+
+            }) + "</td>" + 
+            //"<td>"+info.Value.on("click",myTest(info.ImageName))+"</td>"
+            +"</tr>"
+
+            //$("#"+info.ImageName+"").on("click",myTest(info.ImageName))
+           $(tblRow).appendTo("#Entitydata tbody");
+     });
+   });
+});
+
+function myTest(imgName)
+{
+console.log(imgName)
+ var sourceOfPicture = imgName
+  var img = document.getElementById('bigpic')
+  img.src = sourceOfPicture.replace('90x90', '225x225');
+  img.style.display = "block";
+}
+
+   </script>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="profile">
+   <table id= "Entitydata" border="3" padding="2px" >
+  <thead>
+            <th>SrNo</th>
+            <th>Entity</th>
+            <th>Value</th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+
+</div>
+</div>
+<img style="display:none;" id="bigpic" src="bigpic"/>
+</body>
+</html>

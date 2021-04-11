@@ -1,0 +1,12 @@
+{
+"information":
+[
+        {"SrNo" : "1","Entity":"Licensee","Value":"Zee Entertainment Enterprise Limited","ImageName":"licensor.jpeg"},
+        {"SrNo" : "2","Entity":"Licensor","Value":"Essel Vision Private Limited","ImageName":"licensor.jpeg"},
+        {"SrNo" : "3","Entity":"Program Name","Value":"Dance India Dance - Battle of Champions","ImageName":"licensor.jpeg"},
+        {"SrNo" : "4","Entity":"No.Of.Episodes","Value":"30","ImageName":"licensor.jpeg"},
+        {"SrNo" : "5","Entity":"PricePerEpisode","Value":"Rs.2,30,0000","ImageName":"licensor.jpeg"},
+        {"SrNo" : "6","Entity":"Territory","Value":"Worldwide","ImageName":"licensor.jpeg"},
+        {"SrNo" : "7","Entity":"Language","Value":"Hindi","ImageName":"licensor.jpeg"}
+]
+}
